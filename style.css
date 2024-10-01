@@ -1,0 +1,148 @@
+/* General reset and font settings */
+* {
+    margin: 0;
+    padding: 10;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+/* Body styling with healthcare background image */
+body {
+    background-image: url('https://datarundown.com/wp-content/uploads/2023/05/Data-Mining-Techniques-in-Healthcare.jpg'); /* Replace with your healthcare background image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Change to min-height for full view */
+    color: #7b398f; /* General text color */
+}
+
+/* Header styling */
+header {
+    background-color: rgba(70, 18, 63, 0.9); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(58, 31, 94, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(63, 25, 73, 0.2);
+}
+
+/* Main content area */
+main {
+    margin-top: 300px; /* Space for header */
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Card styling for login, register, and queries */
+.card {
+    background: rgba(61, 28, 83, 0.9); /* Slightly transparent white for a card effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(94, 38, 82, 0.2);
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+h2 {
+    color: #f9fafa; /* Green for health */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input fields styling */
+input, textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #381742; /* Light greenish-blue border */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #251633; /* Darker focus border */
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fbf3fc; /* Primary button color */
+    color: rgb(69, 21, 73);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #250b2b; /* Darker shade for hover effect */
+    transform: translateY(-1px); /* Lift effect on hover */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #f3f1f3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+/* Styling for BMI result */
+.bmi-result {
+    color: rgb(245, 241, 241); /* Change this to the color you want */
+    font-weight: bold; /* Optional: to make the text bold */
+}
+
+.bmi-advice {
+    color: green; /* Change this to the color you want */
+    font-style: italic; /* Optional: to make the text italic */
+}

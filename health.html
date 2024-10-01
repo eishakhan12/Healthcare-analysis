@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="style.css"> <!-- Ensure your CSS file name is correct -->  
+    <main>
+
+        <div class="card">
+            <h2>Healthcare Analysis</h2>
+            <form id="healthForm">
+                <input type="number" id="age" placeholder="Age (years)" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" required>
+                <input type="number" id="height" placeholder="Height (cm)" required>
+                <button type="submit">Healthcare Analysis</button>
+            </form>
+            <div id="analysisResult"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Healthcare Portal. All rights reserved.</p>
+    </footer>
+
+  
+
+    <script>
+        document.getElementById('healthForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+            
+            // Get values from input fields
+            const age = parseFloat(document.getElementById('age').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to m
+
+            // Calculate BMI
+            const bmi = weight / (height * height);
+            let healthTip = '';
+
+            // Provide health tips based on BMI
+            if (bmi < 18.5) {
+                healthTip = 'You are underweight. Consider a balanced diet to gain weight.';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                healthTip = 'You have a normal weight. Keep maintaining a balanced diet and exercise.';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                healthTip = 'You are overweight. Consider a balanced diet and regular exercise.';
+            } else {
+                healthTip = 'You are obese. It’s advisable to consult a healthcare provider for a personalized plan.';
+            }
+
+            // Display the result
+            document.getElementById('analysisResult').innerHTML = `
+                <h3>Your BMI: ${bmi.toFixed(2)}</h3>
+                <p>${healthTip}</p>
+            `;
+        });
+    </script>
+</body>
+</html>
