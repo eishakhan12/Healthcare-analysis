@@ -13,7 +13,17 @@ Installation
 Clone the repository to your local machine.
 bash
 Copy code
-git clone https://github.com/your-repo/healthcare-hub.git
+https://github.com/eishakhan12/Healthcare-analysis/commits/main/
+
+
+
+
+
+
+
+
+
+our-repo/healthcare-hub.git
 Open the project folder and launch index.html in your web browser.
 Usage
 Visit the login or register pages to access your personalized health tools.
